@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .menu-items{
+        display:none;
+    }
+    .menu-items.active{
+       display: inline;
+    }
+</style>
+<script>
+    const menuButton = document.querySelector('.menu-button');
+    const menuItems = document.querySelector('.menu-items');
+    menuButton.addEventListener('mouseover',function(){
+        menuItems.classList.add('active');
+    });
+    menuButton.addEventListener('mouseout',function(){
+        menuItems.classList.remove('active');
+    });
+    
+</script>
+<body>
+    <div class="menu">
+        <button class="menu-button">Menu</button>
+        <ul class="menu-items">
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+    </div>
+</body>
+</html>
